@@ -7,6 +7,10 @@
   "engines": {
     "vscode": "^1.55.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/losidk/vs-code-extension-proxy.git"
+  },
   "categories": [
     "Other"
   ],
