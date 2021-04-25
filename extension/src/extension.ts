@@ -17,28 +17,9 @@ export function activate(context: vscode.ExtensionContext) {
     item.show();
 
     context.subscriptions.push(
-        vscode.window.registerWebviewViewProvider("vs-extension-todos-sidebar", sidebarProvider)
+        vscode.window.registerWebviewViewProvider("vs-extension-proxy-sidebar", sidebarProvider)
     );
 
-    context.subscriptions.push(
-        vscode.commands.registerCommand("vs-extension-todos.addTodo", () => {
-            const { activeTextEditor } = vscode.window;
-
-            if (!activeTextEditor) {
-                vscode.window.showInformationMessage("No active text editor");
-                return;
-            }
-
-            const text = activeTextEditor.document.getText(
-                activeTextEditor.selection
-            );
-
-            sidebarProvider._view?.webview.postMessage({
-                type: "new-todo",
-                value: text,
-            });
-        })
-    );
 
     // let disposable = vscode.commands.registerCommand('vs-extension-todos.helloWorld', () => {
     //     vscode.window.showInformationMessage('Hello World from vs-extension-todos!');

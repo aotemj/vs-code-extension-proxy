@@ -1,7 +1,7 @@
 {
-  "name": "vs-extension-todos",
-  "displayName": "vs-extension-todos",
-  "description": "a vscode extension of todos",
+  "name": "proxy",
+  "displayName": "proxy",
+  "description": "proxy",
   "version": "0.0.1",
   "publisher": "losidk",
   "engines": {
@@ -15,27 +15,25 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vs-extension-todos.helloWorld",
-    "onCommand:vs-extension-todos.askQuestion",
-    "onView:vs-extension-todos-sidebar"
+    "onView:vs-extension-proxy-sidebar"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "vs-extension-todos-sidebar-view",
-          "title": "vs-extension-todos",
+          "id": "vs-extension-proxy-sidebar-view",
+          "title": "proxy",
           "icon": "media/checklist.svg"
         }
       ]
     },
     "views": {
-      "vs-extension-todos-sidebar-view": [
+      "vs-extension-proxy-sidebar-view": [
         {
           "type": "webview",
-          "id": "vs-extension-todos-sidebar",
-          "name": "VSTodo",
+          "id": "vs-extension-proxy-sidebar",
+          "name": "proxy",
           "icon": "media/checklist.svg",
           "contextualTitle": "VSTodo"
         }
