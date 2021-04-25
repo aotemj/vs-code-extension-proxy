@@ -21,27 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
 
-    // let disposable = vscode.commands.registerCommand('vs-extension-todos.helloWorld', () => {
-    //     vscode.window.showInformationMessage('Hello World from vs-extension-todos!');
-    // });
-
     // context.subscriptions.push(disposable);
-
-    context.subscriptions.push(
-        vscode.commands.registerCommand("vs-extension-todos.askQuestion",async ()=>{
-           const answer = await vscode.window.showInformationMessage(
-               "How was your day",
-                "good",
-                "bad"
-                );
-
-            if(answer === "bad"){
-                vscode.window.showInformationMessage("Sorry to hear that")
-            }else {
-                console.log({answer})
-            }
-        })
-    )
 }
 
 export function deactivate() {
